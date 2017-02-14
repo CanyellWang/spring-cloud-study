@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: microservice-consumer-movie-ribbon
+#  cloud:
+#    config:
+#      fail-fast: true
+#      discovery:
+#        enabled: true
+#        service-id: 这里设置配置文件服务器的地址
 eureka:
   client:
     serviceUrl:

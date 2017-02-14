@@ -1,3 +1,7 @@
+spring:
+  application:
+    name: discovery-eureka      #后面都使用项目名后面几个单词
+
 server:
   port: 8761                    # 指定该Eureka实例的端口
 
@@ -9,6 +13,8 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 0  #
 
 # 参考文档：http://projects.spring.io/spring-cloud/docs/1.0.3/spring-cloud.html#_standalone_mode
 # 参考文档：http://my.oschina.net/buwei/blog/618756

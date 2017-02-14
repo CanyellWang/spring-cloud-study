@@ -1,5 +1,6 @@
 package com.itmuch.cloud.study.turbine;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.turbine.EnableTurbine;
@@ -12,6 +13,14 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 @EnableTurbine
 public class TurbineApplication {
   public static void main(String[] args) {
-    new SpringApplicationBuilder(TurbineApplication.class).web(true).run(args);
+    long starTime = System.currentTimeMillis();
+    SpringApplication.run(TurbineApplication.class, args);
+    long endTime = System.currentTimeMillis();
+    long time = endTime - starTime;
+    System.out.println("\nStart Time: " + time / 1000 + " s");
+    System.out.println("...............................................................");
+    System.out.println("..................Service starts successfully..................");
+    System.out.println("...............................................................");
+
   }
 }

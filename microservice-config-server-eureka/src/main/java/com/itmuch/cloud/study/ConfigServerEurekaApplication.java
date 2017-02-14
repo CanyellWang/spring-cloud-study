@@ -10,6 +10,14 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableDiscoveryClient
 public class ConfigServerEurekaApplication {
   public static void main(String[] args) {
+    long starTime = System.currentTimeMillis();
     SpringApplication.run(ConfigServerEurekaApplication.class, args);
+    long endTime = System.currentTimeMillis();
+    long time = endTime - starTime;
+    System.out.println("\nStart Time: " + time / 1000 + " s");
+    System.out.println("...............................................................");
+    System.out.println("..................Service starts successfully..................");
+    System.out.println("...............................................................");
+
   }
 }
